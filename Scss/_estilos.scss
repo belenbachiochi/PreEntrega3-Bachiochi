@@ -1,0 +1,34 @@
+@mixin completo {
+    height: auto;
+    width: 100%;
+}
+div.gallery {
+    margin: 5px;
+    width: 180px;
+    transition: width 2s;
+    padding-left: 25px;
+        &:hover{
+            width: 200px;
+        }
+        img {
+            @include completo;
+        }
+}  
+footer { 
+    @include completo;
+    text-align: center;
+    margin-top: 2%;
+}
+.button-basic  {
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .button-submit  {
+    @extend .button-basic;
+    background-color: green;
+    color: white;
+  }
